@@ -1,43 +1,22 @@
-# Astro Starter Kit: Minimal
+# Astro vs React — ¿Cuándo usar cada uno?
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Landing desarrollada como demostración práctica del **Proyecto Intermodular de Fin de Grado del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web**. Ilustra las diferencias entre el modelo de hidratación completa de las SPAs y la arquitectura de islas de Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Sobre el proyecto
 
-## 🚀 Project Structure
+El trabajo analiza la tecnología Astro como alternativa a los frameworks SPA en el desarrollo de sitios orientados al contenido, evaluando su arquitectura, características y casos de uso frente a React.
 
-Inside of your Astro project, you'll see the following folders and files:
+Esta landing ilustra el argumento central del trabajo: Astro y React no compiten, sino que cubren dominios de aplicación distintos. Saber cuándo usar cada uno es lo que define a un buen desarrollador.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Demo
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+🔗 [Ver landing](https://astro-landing-nine.vercel.app/)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Tecnologías
 
-Any static assets, like images, can be placed in the `public/` directory.
+- [Astro](https://astro.build) — framework principal
+- [React](https://react.dev) — utilizado como isla interactiva
 
-## 🧞 Commands
+## Autor
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**José Antonio López**
