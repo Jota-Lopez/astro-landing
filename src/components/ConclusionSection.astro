@@ -1,0 +1,156 @@
+---
+---
+
+<section class="conclusion">
+  <div class="eyebrow">La conclusión</div>
+
+  <div class="content">
+    <div class="text">
+      <h2 class="title">
+        Herramientas distintas.<br />
+        <span class="dim">Problemas distintos.</span>
+      </h2>
+      <p>
+        Astro no viene a reemplazar a React. React sigue siendo la elección correcta 
+        para aplicaciones complejas, dashboards, o cualquier interfaz donde la 
+        interactividad es el producto.
+      </p>
+      <p>
+        Pero cuando el producto es el contenido — un blog, una landing, una página de 
+        documentación — aplicar el modelo SPA es elegir la herramienta equivocada. 
+        No porque React sea malo, sino porque no es lo que ese problema necesita.
+      </p>
+      <p class="highlight">
+        La competencia profesional no solo está en dominar un framework. Está en saber 
+        cuándo no usarlo.
+      </p>
+    </div>
+
+    <div class="comparison">
+      <div class="col">
+        <div class="col__header col__header--react">React</div>
+        <ul class="col__list">
+          <li>Aplicaciones interactivas</li>
+          <li>Dashboards y paneles</li>
+          <li>Estado complejo en el cliente</li>
+          <li>SPAs con navegación dinámica</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col__header col__header--astro">Astro</div>
+        <ul class="col__list">
+          <li>Blogs y publicaciones</li>
+          <li>Landings y portfolios</li>
+          <li>Documentación técnica</li>
+          <li>Sitios de marketing y contenido</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .conclusion {
+    padding: var(--space-2xl) var(--padding-section);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-lg);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+  }
+
+  .dim {
+    color: var(--color-text-muted);
+  }
+
+  .text p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  .highlight {
+    color: var(--color-text-primary) !important;
+    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-md);
+  }
+
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    padding-top: var(--space-sm);
+  }
+
+  .col__header {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: var(--space-sm) var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .col__header--react {
+    background-color: rgba(97, 218, 251, 0.08);
+    color: #61dafb;
+    border: 1px solid rgba(97, 218, 251, 0.2);
+  }
+
+  .col__header--astro {
+    background-color: var(--color-accent-dim);
+    color: var(--color-accent);
+    border: 1px solid rgba(255, 140, 50, 0.2);
+  }
+
+  .col__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .col__list li {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    padding-left: var(--space-md);
+    position: relative;
+  }
+
+  .col__list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-border);
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

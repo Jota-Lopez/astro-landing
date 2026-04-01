@@ -1,0 +1,221 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ─── Cabecera ─── */
+.stageTop {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-lg);
+}
+
+.stageText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 1;
+}
+
+.stageLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.stageMessage {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  max-width: 60ch;
+  min-height: 4rem;
+}
+
+/* ─── Área principal ─── */
+.mainArea {
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stageDiagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ─── Ventana ─── */
+.page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 380px;
+  flex-shrink: 0;
+}
+
+.windowBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem var(--space-sm);
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.windowTitle {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+.windowButtons {
+  display: flex;
+  align-items: center;
+}
+
+.windowBtn {
+  width: 46px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  cursor: default;
+  transition: background-color 0.15s;
+}
+
+.windowBtn:hover {
+  background-color: #2a2a2a;
+  color: var(--color-text-secondary);
+}
+
+.windowBtnClose:hover {
+  background-color: #c42b1c;
+  color: #fff;
+}
+
+.windowContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+}
+
+/* ─── Bloques ─── */
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem var(--space-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+  min-height: 52px;
+}
+
+.blockLit {
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+.blockIsland {
+  background-color: var(--color-accent-dim);
+  border-color: var(--color-accent);
+}
+
+.blockLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  transition: color 0.4s ease;
+}
+
+.blockLit .blockLabel {
+  color: var(--color-text-secondary);
+}
+
+.blockIsland .blockLabel {
+  color: var(--color-accent);
+}
+
+/* ─── Spinner ─── */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #333;
+  border-top-color: #555;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Island note ─── */
+.islandNote {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  min-height: 1.5rem;
+  text-align: center;
+}
+
+/* ─── Conclusión ─── */
+.conclusion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
+}
+
+.conclusionText {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.conclusionSub {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+}
+
+/* ─── Botón ─── */
+.button {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1.75rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.button:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

@@ -1,0 +1,83 @@
+---
+---
+
+<section class="hero">
+  <div class="eyebrow">Proyecto Intermodular — CFGS DAW</div>
+  <h1 class="title">
+    <span class="dim">No se trata de cuál es mejor.</span>
+    <br />
+    Se trata de cuál usar.
+  </h1>
+  <p class="subtitle">
+    React domina el ecosistema frontend. Astro propone una pregunta incómoda:
+    ¿necesita todo ese JavaScript tu sitio web?
+  </p>
+  <div class="scroll">↓</div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-2xl) var(--padding-section);
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--color-accent-dim) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-lg);
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    font-weight: 400;
+    max-width: 18ch;
+    margin-bottom: var(--space-lg);
+  }
+
+  .dim {
+    color: var(--color-text-muted);
+  }
+
+  .subtitle {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    max-width: 55ch;
+    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-md);
+  }
+
+  .scroll {
+    position: absolute;
+    bottom: var(--space-lg);
+    left: var(--padding-section);
+    font-size: 1.2rem;
+    color: var(--color-border);
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+</style>

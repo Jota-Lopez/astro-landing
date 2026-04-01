@@ -1,0 +1,53 @@
+---
+import HydrationDemo from './HydratationDemo'
+---
+
+<section class="demo">
+  <div class="eyebrow">Demostración interactiva</div>
+  <h2 class="title">
+    <span class="dim">Vélo</span> en acción.
+  </h2>
+  <p class="subtitle">
+    Así se comporta cada modelo cuando el navegador carga una página. 
+    La diferencia no es teórica.
+  </p>
+
+  <HydrationDemo client:load />
+</section>
+
+<style>
+  .demo {
+    padding: var(--space-2xl) var(--padding-section);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-lg);
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+  }
+
+  .dim {
+    color: var(--color-text-muted);
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    max-width: 60ch;
+    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+</style>

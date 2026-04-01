@@ -1,0 +1,126 @@
+---
+---
+
+<section class="problem">
+  <div class="eyebrow">El problema</div>
+
+  <div class="content">
+    <div class="text">
+      <h2 class="title">
+        React es brillante.<br />
+        <span class="dim">¿Pero lo necesitas todo?</span>
+      </h2>
+      <p>
+        Los frameworks SPA como React revolucionaron el desarrollo web. La idea es simple: 
+        el navegador descarga la aplicación entera como JavaScript y la ejecuta en el cliente. 
+        Todo ocurre ahí: el routing, el renderizado, la gestión del estado.
+      </p>
+      <p>
+        El problema aparece cuando aplicamos ese modelo a sitios que, en su mayor parte, 
+        solo muestran contenido. Un blog. Una landing. Una página de documentación. 
+        El usuario no necesita una aplicación interactiva — necesita leer.
+      </p>
+      <p class="highlight">
+        Antes de mostrar una sola línea de texto, el navegador tiene que descargar, 
+        parsear y ejecutar cientos de kilobytes de JavaScript. El contenido espera.
+      </p>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <span class="metric__value">3×</span>
+        <span class="metric__label">más JavaScript del necesario en sitios de contenido típicos</span>
+      </div>
+      <div class="metric">
+        <span class="metric__value">~70%</span>
+        <span class="metric__label">del peso de una SPA media corresponde a frameworks y librerías</span>
+      </div>
+      <div class="metric">
+        <span class="metric__value">FCP</span>
+        <span class="metric__label">First Contentful Paint penalizado hasta que el bundle JS se ejecuta</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem {
+    padding: var(--space-2xl) var(--padding-section);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-lg);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+  }
+
+  .dim {
+    color: var(--color-text-muted);
+  }
+
+  .text p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  .highlight {
+    color: var(--color-text-primary) !important;
+    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-md);
+  }
+
+  .metrics {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding-top: var(--space-sm);
+  }
+
+  .metric {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .metric__value {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    color: var(--color-accent);
+    line-height: 1;
+  }
+
+  .metric__label {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

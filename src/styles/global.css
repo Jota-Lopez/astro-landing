@@ -1,0 +1,42 @@
+/* ─── Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Design tokens ─── */
+:root {
+  /* Colores */
+  --color-bg:         #0f0f0f;
+  --color-surface:    #161616;
+  --color-border:     #222222;
+  --color-accent:     #ff8c32;
+  --color-accent-dim: rgba(255, 140, 50, 0.08);
+
+  --color-text-primary:   #f0f0f0;
+  --color-text-secondary: #888888;
+  --color-text-muted:     #555555;
+
+  /* Tipografía */
+  --font-display: 'DM Serif Display', serif;
+  --font-mono:    'DM Mono', monospace;
+
+  /* Espaciado */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --padding-section: 8vw;
+}
+
+/* ─── Base ─── */
+body {
+  font-family: var(--font-mono);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}

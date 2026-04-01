@@ -1,0 +1,168 @@
+---
+---
+
+<section class="solution">
+  <div class="eyebrow">La respuesta</div>
+
+  <div class="intro">
+    <h2 class="title">
+      <span class="dim">Conoce</span> Astro.
+    </h2>
+    <p class="subtitle">
+      Un framework diseñado desde cero para sitios orientados al contenido. 
+      Su principio fundamental: enviar cero JavaScript al navegador por defecto, 
+      y añadirlo únicamente donde sea necesario.
+    </p>
+  </div>
+
+  <div class="islands">
+    <div class="islands__diagram">
+      <div class="page">
+        <div class="block block--static">
+          <span class="block__label">Header</span>
+          <span class="block__tag">HTML estático</span>
+        </div>
+        <div class="block block--static">
+          <span class="block__label">Contenido</span>
+          <span class="block__tag">HTML estático</span>
+        </div>
+        <div class="block block--island">
+          <span class="block__label">Componente interactivo</span>
+          <span class="block__tag">⚡ Isla React</span>
+        </div>
+        <div class="block block--static">
+          <span class="block__label">Más contenido</span>
+          <span class="block__tag">HTML estático</span>
+        </div>
+        <div class="block block--static">
+          <span class="block__label">Footer</span>
+          <span class="block__tag">HTML estático</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="islands__text">
+      <h3 class="islands__title">La arquitectura de islas</h3>
+      <p>
+        En Astro, una página es mayoritariamente HTML estático generado en el servidor. 
+        Solo los componentes que requieren interactividad real se convierten en "islas" — 
+        fragmentos aislados que cargan y ejecutan JavaScript de forma independiente.
+      </p>
+      <p>
+        El resto de la página no espera. El contenido es visible de inmediato, 
+        sin que el navegador tenga que procesar ningún bundle.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .solution {
+    padding: var(--space-2xl) var(--padding-section);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-lg);
+  }
+
+  .intro {
+    margin-bottom: var(--space-xl);
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+  }
+
+  .dim {
+    color: var(--color-text-muted);
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    max-width: 60ch;
+    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-md);
+  }
+
+  .islands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: var(--space-md);
+  }
+
+  .block {
+    padding: var(--space-sm) var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-border);
+  }
+
+  .block--static {
+    background-color: var(--color-bg);
+  }
+
+  .block--island {
+    background-color: rgba(255, 140, 50, 0.08);
+    border-color: var(--color-accent);
+  }
+
+  .block__label {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+  }
+
+  .block__tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+  }
+
+  .block--island .block__tag {
+    color: var(--color-accent);
+  }
+
+  .islands__title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: var(--space-md);
+  }
+
+  .islands__text p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+
+
+  @media (max-width: 768px) {
+    .islands {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
